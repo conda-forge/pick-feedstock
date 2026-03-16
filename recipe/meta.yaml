@@ -1,5 +1,5 @@
 {% set name = "pick" %}
-{% set version = "2.2.0" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pick-{{ version }}.tar.gz
-  sha256: 96920ebcfb9b8b6c2e50d9f211a700e5036611904169587a5a9245a645637a0d
+  sha256: f24434a845ae9265ebf7657fc224b9a203ac75aa576b568e061484a72e27be82
 
 build:
   skip: true  # [py<36 or win]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
